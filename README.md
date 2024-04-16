@@ -1,5 +1,13 @@
 # MuseV [English](README.md) [中文](README-zh.md)
 
+(1) Run
+```
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+sudo apt install build-essential
+apt install ffmpeg
+```
+
 <font size=5>MuseV: Infinite-length and High Fidelity Virtual Human Video Generation with Visual Conditioned  Parallel Denoising
 </br>
 Zhiqiang Xia <sup>\*</sup>,
