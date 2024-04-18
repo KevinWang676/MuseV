@@ -24,6 +24,7 @@ mim install "mmpose>=1.1.0"
 (3) Run
 ```
 git clone https://huggingface.co/TMElyralab/MuseV ./checkpoints
+mv workspace/MuseV/musev workspace/MuseV/scripts/gradio
 ```
 
 (4) Run
