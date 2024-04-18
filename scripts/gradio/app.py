@@ -200,9 +200,9 @@ with gr.Blocks(css=css) as demo:
                 )
                 video_length = gr.Number(
                     label="Video Length(need smaller than 720,If you want to be able to generate longer videos, run it locally )",
-                    value=12,
+                    value=180,
                 )
-                fps = gr.Number(label="Generate Video FPS", value=6)
+                fps = gr.Number(label="Generate Video FPS", value=30)
                 gr.Markdown(
                     (
                         "If W&H is -1, then use the Reference Image's Size. Size of target video is $(W, H)*img\_edge\_ratio$. \n"
@@ -301,8 +301,8 @@ with gr.Blocks(css=css) as demo:
                         label="Seed (seed=-1 means that the seeds run each time are different)",
                         value=-1,
                     )
-                    video_length = gr.Number(label="Video Length", value=180)
-                    fps = gr.Number(label="Generate Video FPS", value=30)
+                    video_length = gr.Number(label="Video Length", value=12)
+                    fps = gr.Number(label="Generate Video FPS", value=6)
                     gr.Markdown(
                         (
                             "If W&H is -1, then use the Reference Image's Size. Size of target video is $(W, H)*img\_edge\_ratio$. \n"
