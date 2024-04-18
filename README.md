@@ -17,9 +17,18 @@ pip install --no-cache-dir -U openmim
 mim install mmengine 
 mim install "mmcv>=2.0.1" 
 mim install "mmdet>=3.1.0" 
-mim install "mmpose>=1.1.0" 
+mim install "mmpose>=1.1.0"
 ```
 
+(3) Run
+```
+git clone https://huggingface.co/TMElyralab/MuseV ./checkpoints
+```
+
+(4) Run
+```bash
+python scripts/inference/text2video.py   --sd_model_name majicmixRealv6Fp16   --unet_model_name musev_referencenet --referencenet_model_name musev_referencenet --ip_adapter_model_name musev_referencenet   -test_data_path ./configs/tasks/example.yaml  --output_dir ./output  --n_batch 1  --target_datas yongen  --vision_clip_extractor_class_name ImageClipVisionFeatureExtractor --vision_clip_model_path ./checkpoints/IP-Adapter/models/image_encoder  --time_size 12 --fps 12  
+```
 
 <font size=5>MuseV: Infinite-length and High Fidelity Virtual Human Video Generation with Visual Conditioned  Parallel Denoising
 </br>
