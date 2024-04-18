@@ -8,6 +8,15 @@ sudo apt install build-essential
 apt install ffmpeg
 ```
 
+(2) Run
+```
+git clone --recursive https://github.com/KevinWang676/MuseV.git
+cd MuseV
+pip install -r requirements.txt
+
+```
+
+
 <font size=5>MuseV: Infinite-length and High Fidelity Virtual Human Video Generation with Visual Conditioned  Parallel Denoising
 </br>
 Zhiqiang Xia <sup>\*</sup>,
