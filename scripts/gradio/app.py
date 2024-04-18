@@ -15,22 +15,6 @@ ignore_video2video = False
 max_image_edge = 1280
 
 
-def download_model():
-    if not os.path.exists(CheckpointsDir):
-        print("Checkpoint Not Downloaded, start downloading...")
-        tic = time.time()
-        snapshot_download(
-            repo_id="TMElyralab/MuseV",
-            local_dir=CheckpointsDir,
-            max_workers=8,
-        )
-        toc = time.time()
-        print(f"download cost {toc-tic} seconds")
-    else:
-        print("Already download the model.")
-
-
-download_model()  # for huggingface deployment.
 if not ignore_video2video:
     from gradio_video2video import online_v2v_inference
 from gradio_text2video import online_t2v_inference
