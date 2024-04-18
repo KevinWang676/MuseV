@@ -13,6 +13,7 @@ apt install ffmpeg
 git clone --recursive https://github.com/KevinWang676/MuseV.git
 cd MuseV
 pip install -r requirements.txt
+pip install gradio==4.12
 pip install --no-cache-dir -U openmim 
 mim install mmengine 
 mim install "mmcv>=2.0.1" 
