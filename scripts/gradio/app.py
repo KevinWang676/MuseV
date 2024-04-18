@@ -108,9 +108,9 @@ def limit_shape(image, input_w, input_h, img_edge_ratio, max_image_edge=max_imag
 def limit_length(length):
     """limite generation video frames numer to avoid gpu memory overflow"""
 
-    if length > 24 * 6:
-        gr.Warning("Length need to smaller than 144, dute to gpu memory limit")
-        length = 24 * 6
+    if length > 120 * 6:
+        gr.Warning("Length need to smaller than 720, dute to gpu memory limit")
+        length = 120 * 6
     return length
 
 
@@ -199,7 +199,7 @@ with gr.Blocks(css=css) as demo:
                     value=-1,
                 )
                 video_length = gr.Number(
-                    label="Video Length(need smaller than 144,If you want to be able to generate longer videos, run it locally )",
+                    label="Video Length(need smaller than 720,If you want to be able to generate longer videos, run it locally )",
                     value=12,
                 )
                 fps = gr.Number(label="Generate Video FPS", value=6)
