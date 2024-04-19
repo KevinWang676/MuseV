@@ -1,5 +1,7 @@
 # MuseV [English](README.md) [中文](README-zh.md)
 
+### Using Vast AI
+
 (1) Run
 ```
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
@@ -36,6 +38,16 @@ python app.py
 (4) Or run
 ```bash
 python scripts/inference/text2video.py   --sd_model_name majicmixRealv6Fp16   --unet_model_name musev_referencenet --referencenet_model_name musev_referencenet --ip_adapter_model_name musev_referencenet   -test_data_path ./configs/tasks/example.yaml  --output_dir ./output  --n_batch 1  --target_datas yongen  --vision_clip_extractor_class_name ImageClipVisionFeatureExtractor --vision_clip_model_path ./checkpoints/IP-Adapter/models/image_encoder  --time_size 12 --fps 12  
+```
+
+### Using AutoDL
+
+Run
+```
+mv MuseV autodl-tmp
+source /etc/network_turbo
+cd autodl-tmp/MuseV/scripts/gradio
+python app.py
 ```
 
 <font size=5>MuseV: Infinite-length and High Fidelity Virtual Human Video Generation with Visual Conditioned  Parallel Denoising
