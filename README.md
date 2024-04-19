@@ -46,6 +46,7 @@ Run
 ```
 mv MuseV autodl-tmp
 source /etc/network_turbo
+git clone https://huggingface.co/TMElyralab/MuseV ./checkpoints
 cd autodl-tmp/MuseV/scripts/gradio
 python app.py
 ```
