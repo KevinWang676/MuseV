@@ -200,7 +200,7 @@ with gr.Blocks(css=css) as demo:
                 )
                 video_length = gr.Number(
                     label="Video Length(need smaller than 720,If you want to be able to generate longer videos, run it locally )",
-                    value=120,
+                    value=72,
                 )
                 fps = gr.Number(label="Generate Video FPS", value=12)
                 gr.Markdown(
